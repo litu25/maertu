@@ -1,0 +1,779 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>壹想科技｜区域就业服务落地与运营伙伴</title>
+  <meta name="description" content="壹想科技面向高校、人社、零工市场、就业驿站与街道社区，提供AI就业服务项目落地、活动运营、案例沉淀与区域服务支持。">
+  <meta name="keywords" content="壹想科技,区域就业服务,高校就业服务,人社就业服务,就业驿站,零工市场,AI就业服务落地,招聘会服务">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="壹想科技｜区域就业服务落地与运营伙伴">
+  <meta property="og:description" content="面向高校、人社、零工市场、就业驿站与街道社区的AI就业服务落地与运营支持。">
+  <meta property="og:image" content="https://mrtoss.maertudtech.com/pic/com-picture/img2%20(1).png">
+  <meta property="og:locale" content="zh_CN">
+  <link rel="canonical" href="https://litu25.github.io/maertu/onethink.html">
+  <style>
+    :root {
+      --ink: #10253b;
+      --text: #263d56;
+      --muted: #6c7d93;
+      --blue: #2e6cf6;
+      --sky: #20b7ff;
+      --cyan: #3ad9dd;
+      --green: #20bd8d;
+      --orange: #ff9d43;
+      --panel: rgba(255, 255, 255, .80);
+      --line: rgba(80, 126, 178, .16);
+      --shadow: 0 24px 80px rgba(46, 108, 246, .13);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 12% 8%, rgba(46,108,246,.15), transparent 30%),
+        radial-gradient(circle at 86% 10%, rgba(32,189,141,.16), transparent 34%),
+        linear-gradient(180deg, #f8fcff 0%, #eef8ff 48%, #f7fbff 100%);
+      font-family: "Microsoft YaHei", "PingFang SC", "Noto Sans SC", sans-serif;
+      line-height: 1.68;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 30;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 14px clamp(18px, 5vw, 72px);
+      border-bottom: 1px solid var(--line);
+      background: rgba(249, 252, 255, .88);
+      backdrop-filter: blur(18px);
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--ink);
+      font-weight: 900;
+      white-space: nowrap;
+    }
+
+    .brand-mark {
+      display: grid;
+      place-items: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 14px;
+      color: white;
+      background: linear-gradient(135deg, var(--blue), var(--green));
+      box-shadow: 0 12px 30px rgba(46,108,246,.22);
+    }
+
+    .brand span { display: grid; line-height: 1.15; }
+    .brand small { color: var(--muted); font-size: 11px; font-weight: 700; }
+
+    .main-nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 22px;
+      color: #445872;
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    .main-nav a {
+      padding: 8px 0;
+      border-bottom: 2px solid transparent;
+    }
+
+    .main-nav a:hover {
+      color: var(--blue);
+      border-color: var(--blue);
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      min-height: 90vh;
+      padding: clamp(92px, 12vh, 138px) clamp(20px, 6vw, 86px) 48px;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background:
+        linear-gradient(120deg, rgba(46,108,246,.08), transparent 28%),
+        repeating-linear-gradient(90deg, rgba(46,108,246,.045) 0 1px, transparent 1px 88px);
+      mask-image: linear-gradient(180deg, #000 0%, transparent 78%);
+    }
+
+    .hero-wrap {
+      position: relative;
+      max-width: 1240px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.02fr .98fr;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 18px;
+      color: var(--blue);
+      font-size: 14px;
+      font-weight: 900;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 28px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--blue), var(--green));
+    }
+
+    h1, h2, h3 {
+      margin: 0;
+      color: var(--ink);
+      letter-spacing: 0;
+    }
+
+    h1 {
+      max-width: 740px;
+      font-size: clamp(42px, 6vw, 76px);
+      line-height: 1.03;
+    }
+
+    .gradient-text {
+      display: block;
+      color: transparent;
+      background: linear-gradient(92deg, #1859e8, #09a8ff 52%, #20bd8d);
+      -webkit-background-clip: text;
+      background-clip: text;
+    }
+
+    .hero-lead {
+      max-width: 700px;
+      margin: 24px 0 0;
+      color: #5d7188;
+      font-size: clamp(16px, 2vw, 21px);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 34px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 0 20px;
+      border-radius: 999px;
+      border: 1px solid rgba(46, 108, 246, .20);
+      color: var(--blue);
+      background: rgba(255,255,255,.78);
+      box-shadow: 0 12px 34px rgba(46,108,246,.10);
+      font-weight: 900;
+    }
+
+    .btn.primary {
+      color: white;
+      border: 0;
+      background: linear-gradient(92deg, #3b65ff, #13b9d8);
+      box-shadow: 0 18px 36px rgba(46,108,246,.25);
+    }
+
+    .hero-visual {
+      position: relative;
+      min-height: 520px;
+    }
+
+    .map-board {
+      position: absolute;
+      inset: 56px 4% auto auto;
+      width: min(430px, 82vw);
+      min-height: 330px;
+      padding: 30px;
+      border: 1px solid rgba(255,255,255,.74);
+      border-radius: 34px;
+      background:
+        linear-gradient(150deg, rgba(255,255,255,.95), rgba(224,244,255,.75)),
+        radial-gradient(circle at 78% 20%, rgba(58,217,221,.30), transparent 34%);
+      box-shadow: var(--shadow);
+      transform: rotate(-4deg);
+    }
+
+    .map-board h3 {
+      font-size: 24px;
+    }
+
+    .route-line {
+      position: relative;
+      height: 160px;
+      margin-top: 26px;
+      border-radius: 22px;
+      background:
+        linear-gradient(135deg, rgba(46,108,246,.10), rgba(32,189,141,.12)),
+        repeating-linear-gradient(0deg, rgba(46,108,246,.06) 0 1px, transparent 1px 34px);
+      overflow: hidden;
+    }
+
+    .route-line::before {
+      content: "";
+      position: absolute;
+      left: 26px;
+      right: 26px;
+      top: 80px;
+      height: 3px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, var(--blue), var(--green));
+    }
+
+    .pin {
+      position: absolute;
+      display: grid;
+      place-items: center;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      color: white;
+      background: linear-gradient(135deg, var(--blue), var(--sky));
+      box-shadow: 0 12px 28px rgba(46,108,246,.26);
+      font-weight: 900;
+    }
+
+    .pin:nth-child(1) { left: 22px; top: 58px; }
+    .pin:nth-child(2) { left: 38%; top: 32px; background: linear-gradient(135deg, var(--green), var(--cyan)); }
+    .pin:nth-child(3) { right: 26px; top: 58px; background: linear-gradient(135deg, var(--orange), #ffbf68); }
+
+    .data-card {
+      position: absolute;
+      border: 1px solid rgba(255,255,255,.78);
+      border-radius: 18px;
+      background: rgba(255,255,255,.74);
+      box-shadow: 0 18px 54px rgba(46,108,246,.14);
+      backdrop-filter: blur(14px);
+      padding: 18px;
+    }
+
+    .data-card.one { left: 2%; top: 84px; width: 202px; }
+    .data-card.two { right: 0; bottom: 70px; width: 230px; }
+    .data-card.three { left: 8%; bottom: 54px; width: 250px; }
+
+    .data-card strong {
+      display: block;
+      color: var(--ink);
+      font-size: 24px;
+      line-height: 1.1;
+    }
+
+    .data-card span {
+      display: block;
+      margin-top: 6px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .quick-nav {
+      position: relative;
+      max-width: 1120px;
+      margin: -24px auto 0;
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 1px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: var(--line);
+      box-shadow: var(--shadow);
+    }
+
+    .quick-nav a {
+      min-height: 96px;
+      padding: 22px;
+      background: rgba(255,255,255,.86);
+    }
+
+    .quick-nav strong {
+      display: block;
+      color: var(--ink);
+      font-size: 18px;
+    }
+
+    .quick-nav span {
+      display: block;
+      margin-top: 6px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    section {
+      padding: 84px clamp(20px, 6vw, 86px);
+    }
+
+    .section-head {
+      max-width: 1180px;
+      margin: 0 auto 38px;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: clamp(30px, 4vw, 48px);
+      line-height: 1.12;
+    }
+
+    .section-head p {
+      max-width: 720px;
+      margin: 14px auto 0;
+      color: var(--muted);
+    }
+
+    .grid {
+      max-width: 1180px;
+      margin: 0 auto;
+      display: grid;
+      gap: 18px;
+    }
+
+    .service-grid,
+    .news-grid {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .card,
+    .news-card,
+    .case-card {
+      position: relative;
+      min-height: 248px;
+      overflow: hidden;
+      padding: 26px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: var(--panel);
+      box-shadow: 0 10px 32px rgba(46,108,246,.08);
+      backdrop-filter: blur(16px);
+    }
+
+    .card::after,
+    .news-card::after {
+      content: "";
+      position: absolute;
+      top: -36px;
+      right: -34px;
+      width: 110px;
+      height: 110px;
+      border-radius: 34px;
+      background: linear-gradient(135deg, rgba(46,108,246,.14), rgba(32,189,141,.18));
+      transform: rotate(18deg);
+    }
+
+    .icon {
+      display: grid;
+      place-items: center;
+      width: 44px;
+      height: 44px;
+      margin-bottom: 18px;
+      border-radius: 14px;
+      color: white;
+      background: linear-gradient(135deg, var(--blue), var(--green));
+      font-weight: 900;
+    }
+
+    h3 {
+      font-size: 21px;
+      line-height: 1.25;
+    }
+
+    .card p,
+    .case-card p,
+    .news-card p,
+    .operate-card p {
+      margin: 12px 0 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .operation {
+      overflow: hidden;
+      color: white;
+      background:
+        linear-gradient(115deg, rgba(46,108,246,.94), rgba(32,189,141,.74)),
+        radial-gradient(circle at 80% 35%, rgba(255,255,255,.32), transparent 34%);
+    }
+
+    .operation h2,
+    .operation h3 {
+      color: white;
+    }
+
+    .operation .section-head p,
+    .operate-card p {
+      color: rgba(255,255,255,.78);
+    }
+
+    .operation-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .operate-card {
+      min-height: 250px;
+      padding: 28px;
+      border: 1px solid rgba(255,255,255,.22);
+      border-radius: 20px;
+      background: rgba(255,255,255,.13);
+      backdrop-filter: blur(14px);
+    }
+
+    .case-section {
+      background: linear-gradient(180deg, #f8fcff, #edf8ff);
+    }
+
+    .case-layout {
+      max-width: 1180px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.08fr .92fr;
+      gap: 24px;
+      align-items: stretch;
+    }
+
+    .case-visual {
+      min-height: 470px;
+      border: 1px solid rgba(255,255,255,.72);
+      border-radius: 26px;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,.44), rgba(255,255,255,.18)),
+        url("https://mrtoss.maertudtech.com/pic/com-picture/img2%20(1).png") center / cover no-repeat;
+      box-shadow: var(--shadow);
+    }
+
+    .case-list {
+      display: grid;
+      gap: 16px;
+    }
+
+    .news-section {
+      background: linear-gradient(180deg, #f7fbff, #eef8ff);
+    }
+
+    .news-type {
+      display: inline-flex;
+      margin-bottom: 16px;
+      padding: 5px 10px;
+      border-radius: 999px;
+      color: var(--blue);
+      background: rgba(46,108,246,.09);
+      font-size: 12px;
+      font-weight: 900;
+    }
+
+    .contact {
+      color: white;
+      background:
+        radial-gradient(circle at 70% 10%, rgba(32,189,141,.24), transparent 34%),
+        linear-gradient(180deg, #07182c, #020a16);
+    }
+
+    .contact h2 {
+      color: white;
+    }
+
+    .contact-wrap {
+      max-width: 1180px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 34px;
+      align-items: center;
+    }
+
+    .contact p {
+      max-width: 720px;
+      color: rgba(255,255,255,.72);
+    }
+
+    .contact-box {
+      display: grid;
+      gap: 10px;
+      padding: 24px;
+      border: 1px solid rgba(255,255,255,.16);
+      border-radius: 18px;
+      background: rgba(255,255,255,.07);
+    }
+
+    .contact-box span {
+      color: rgba(255,255,255,.72);
+      font-size: 13px;
+    }
+
+    footer {
+      padding: 22px clamp(20px, 6vw, 86px);
+      color: rgba(255,255,255,.56);
+      background: #020a16;
+      font-size: 13px;
+    }
+
+    footer div {
+      max-width: 1180px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 980px) {
+      .site-header {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .main-nav {
+        justify-content: flex-start;
+      }
+
+      .hero-wrap,
+      .quick-nav,
+      .service-grid,
+      .operation-grid,
+      .case-layout,
+      .news-grid,
+      .contact-wrap {
+        grid-template-columns: 1fr;
+      }
+
+      .hero { min-height: auto; }
+      .hero-visual { min-height: 440px; }
+
+      .map-board,
+      .data-card.one,
+      .data-card.two,
+      .data-card.three {
+        position: relative;
+        inset: auto;
+        width: auto;
+        margin-top: 14px;
+      }
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "福州壹想科技有限公司",
+    "alternateName": "壹想科技",
+    "url": "https://onethink.maertudtech.com/",
+    "description": "面向高校、人社、零工市场、就业驿站与街道社区的AI就业服务落地与运营伙伴。",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+86-158-027-23777",
+      "contactType": "项目咨询",
+      "areaServed": "CN",
+      "availableLanguage": "zh-CN"
+    }
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="壹想科技">
+      <span class="brand-mark">壹</span>
+      <span>壹想科技<small>区域就业服务落地与运营伙伴</small></span>
+    </a>
+    <nav class="main-nav" aria-label="主导航">
+      <a href="#services">服务场景</a>
+      <a href="#operation">运营能力</a>
+      <a href="#cases">项目案例</a>
+      <a href="#news">资讯动态</a>
+      <a href="#contact">联系我们</a>
+      <a href="index.html">美尔途官网</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-wrap">
+        <div>
+          <div class="eyebrow">区域项目落地 · 活动运营 · 案例沉淀</div>
+          <h1>壹想科技<br><span class="gradient-text">就业服务落地运营伙伴</span></h1>
+          <p class="hero-lead">连接高校、人社、零工市场、就业驿站与街道社区，提供AI就业服务项目部署、现场活动支持、地方案例沉淀和持续运营服务。</p>
+          <div class="hero-actions">
+            <a class="btn primary" href="#services">查看服务场景</a>
+            <a class="btn" href="#cases">查看项目案例</a>
+          </div>
+        </div>
+        <div class="hero-visual" aria-label="区域就业服务网络">
+          <div class="map-board">
+            <h3>区域就业服务网络</h3>
+            <div class="route-line">
+              <div class="pin">校</div>
+              <div class="pin">社</div>
+              <div class="pin">企</div>
+            </div>
+          </div>
+          <div class="data-card one"><strong>活动</strong><span>招聘会、双选会、进校园服务支持</span></div>
+          <div class="data-card two"><strong>运营</strong><span>内容发布、案例整理、媒体报道沉淀</span></div>
+          <div class="data-card three"><strong>落地</strong><span>高校、人社、基层服务站点部署协同</span></div>
+        </div>
+      </div>
+    </section>
+
+    <nav class="quick-nav" aria-label="快速入口">
+      <a href="#services"><strong>服务场景</strong><span>区域高校、人社、零工市场、就业驿站</span></a>
+      <a href="#operation"><strong>运营支持</strong><span>活动执行、内容整理、服务反馈</span></a>
+      <a href="#cases"><strong>项目案例</strong><span>本地实践、媒体报道、活动记录</span></a>
+      <a href="index.html"><strong>产品体系</strong><span>了解美尔途 AI职途平台与终端</span></a>
+    </nav>
+
+    <section id="services">
+      <div class="section-head">
+        <h2>服务区域就业工作一线</h2>
+        <p>壹想科技更贴近项目现场，帮助地方单位把AI就业服务从产品能力转化为可体验、可运营、可展示的服务成果。</p>
+      </div>
+      <div class="grid service-grid">
+        <article class="card">
+          <div class="icon">校</div>
+          <h3>高校就业活动</h3>
+          <p>支持校园招聘会、就业指导活动、生涯教育体验区和学生求职训练服务。</p>
+        </article>
+        <article class="card">
+          <div class="icon">政</div>
+          <h3>人社服务项目</h3>
+          <p>配合公共就业服务、人才服务、基层就业站点和专项行动开展。</p>
+        </article>
+        <article class="card">
+          <div class="icon">工</div>
+          <h3>零工市场运营</h3>
+          <p>服务灵活就业求职登记、岗位推荐、技能培训和现场咨询。</p>
+        </article>
+        <article class="card">
+          <div class="icon">站</div>
+          <h3>就业驿站社区</h3>
+          <p>配合街道社区把就业咨询、简历优化、岗位匹配服务送到居民身边。</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="operation" class="operation">
+      <div class="section-head">
+        <h2>从部署到运营的项目支持</h2>
+        <p>项目不是设备到场就结束。壹想科技关注现场使用、活动转化、案例记录和持续传播，让每一次服务都有沉淀。</p>
+      </div>
+      <div class="grid operation-grid">
+        <article class="operate-card">
+          <h3>活动执行支持</h3>
+          <p>配合招聘会、双选会、进校园、就业服务月等活动，完成现场布置、流程引导和服务体验。</p>
+        </article>
+        <article class="operate-card">
+          <h3>案例内容沉淀</h3>
+          <p>把服务数据、活动亮点、媒体报道和项目成果整理为可展示的案例内容。</p>
+        </article>
+        <article class="operate-card">
+          <h3>区域服务协同</h3>
+          <p>面向本地高校、人社、街道社区和企业资源，形成长期服务联动。</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="cases" class="case-section">
+      <div class="section-head">
+        <h2>项目案例与活动记录</h2>
+        <p>通过地方实践、活动报道和服务记录，展示AI就业服务在区域一线的真实应用。</p>
+      </div>
+      <div class="case-layout">
+        <div class="case-visual" aria-label="项目现场示意"></div>
+        <div class="case-list">
+          <article class="case-card">
+            <h3>高校招聘会服务</h3>
+            <p>为校园招聘会提供AI求职体验、简历诊断、岗位推荐和现场服务引导。</p>
+          </article>
+          <article class="case-card">
+            <h3>基层就业服务站点</h3>
+            <p>配合街道社区和就业驿站建设，为居民提供就近就业服务。</p>
+          </article>
+          <article class="case-card">
+            <h3>地方媒体报道整理</h3>
+            <p>将项目进展、服务亮点和媒体链接沉淀为持续可查的区域案例。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="news" class="news-section">
+      <div class="section-head">
+        <h2>资讯动态</h2>
+        <p>持续发布地方就业服务活动、项目进展、政策解读和案例复盘，让区域服务进展清晰可见。</p>
+      </div>
+      <div class="grid news-grid">
+        <article class="news-card">
+          <span class="news-type">活动报道</span>
+          <h3>校园招聘会AI就业服务专区</h3>
+          <p>记录活动现场服务流程、学生体验和岗位匹配情况。</p>
+        </article>
+        <article class="news-card">
+          <span class="news-type">人社项目</span>
+          <h3>公共就业服务站点升级</h3>
+          <p>展示基层就业服务窗口如何引入智能化工具提升服务触达。</p>
+        </article>
+        <article class="news-card">
+          <span class="news-type">零工市场</span>
+          <h3>灵活就业服务现场实践</h3>
+          <p>关注零工求职、技能培训、岗位推荐与服务跟踪。</p>
+        </article>
+        <article class="news-card">
+          <span class="news-type">媒体报道</span>
+          <h3>地方媒体关注就业服务创新</h3>
+          <p>集中整理区域媒体报道、活动亮点和项目成果。</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="contact-wrap">
+        <div>
+          <div class="eyebrow">项目咨询</div>
+          <h2>把AI就业服务落到真实场景</h2>
+          <p>欢迎高校、人社部门、零工市场、就业驿站与街道社区咨询区域服务落地、活动执行和项目运营支持。</p>
+          <div class="hero-actions">
+            <a class="btn primary" href="tel:15802723777">拨打客户专线</a>
+            <a class="btn" href="index.html">了解美尔途产品体系</a>
+          </div>
+        </div>
+        <div class="contact-box">
+          <strong>客户专线：158 027 23777</strong>
+          <span>微信号：填写企业微信/联系人微信</span>
+          <span>公众号：填写公众号名称</span>
+          <span>视频号：填写视频号名称</span>
+          <span>抖音号：填写抖音账号</span>
+          <span>邮箱：填写企业邮箱</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div>
+      <span>© 2026 福州壹想科技有限公司</span>
+      <span>区域就业服务落地与运营伙伴</span>
+    </div>
+  </footer>
+</body>
+</html>
