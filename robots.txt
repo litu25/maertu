@@ -1,0 +1,28 @@
+User-agent: *
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: DeepSeek-Crawler
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: Baiduspider-render
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+Sitemap: https://litu25.github.io/maertu/sitemap.xml
