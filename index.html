@@ -3,31 +3,30 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>美尔途 AI职途｜高校与人社公共就业服务数字化解决方案</title>
-  <meta name="description" content="美尔途 AI职途面向高校就业中心、人社部门、零工市场、就业驿站与街道社区，提供AI简历诊断、职业测评、AI模拟面试、人岗匹配与就业服务智能终端。">
+  <title>美尔途 AI职途｜就业服务智能化解决方案</title>
+  <meta name="description" content="美尔途 AI职途面向高校就业中心、人社部门、零工市场、就业驿站与街道社区，提供AI简历诊断、职业测评、AI模拟面试、人岗匹配与智能终端服务。">
   <meta name="keywords" content="AI就业服务,高校就业服务,人社就业服务,零工市场数字化,就业驿站,AI面试舱,AI就业服务一体机,AI简历诊断,AI模拟面试,AI职途">
   <meta name="robots" content="index,follow,max-image-preview:large">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="美尔途 AI职途｜高校与人社公共就业服务数字化解决方案">
-  <meta property="og:description" content="覆盖高校、人社、零工市场、就业驿站、街道社区的AI就业服务平台与智能终端。">
+  <meta property="og:title" content="美尔途 AI职途｜就业服务智能化解决方案">
+  <meta property="og:description" content="服务高校、人社、零工市场、就业驿站与街道社区的AI就业服务平台与智能终端。">
   <meta property="og:image" content="https://mrtoss.maertudtech.com/pic/com-picture/img1%20(1).png">
   <meta property="og:locale" content="zh_CN">
   <link rel="canonical" href="https://litu25.github.io/maertu/">
   <style>
     :root {
-      --ink: #162229;
-      --deep: #0d2f33;
-      --muted: #697a82;
-      --paper: #f6f7f1;
-      --card: #ffffff;
-      --line: #d9e0da;
-      --green: #116d5a;
-      --teal: #178a7b;
-      --blue: #235e91;
-      --red: #b84335;
-      --gold: #c68a2b;
-      --soft: #e8efe9;
-      --shadow: 0 22px 70px rgba(22, 34, 41, .13);
+      --ink: #14233a;
+      --text: #24364f;
+      --muted: #6c7d93;
+      --blue: #2d6ff7;
+      --sky: #18a9ff;
+      --cyan: #38d7dd;
+      --violet: #6b7cff;
+      --green: #20b989;
+      --paper: #f4f9ff;
+      --panel: rgba(255, 255, 255, .78);
+      --line: rgba(87, 123, 171, .16);
+      --shadow: 0 24px 80px rgba(45, 111, 247, .14);
     }
 
     * {
@@ -40,10 +39,13 @@
 
     body {
       margin: 0;
-      color: var(--ink);
-      background: var(--paper);
+      color: var(--text);
+      background:
+        radial-gradient(circle at 16% 7%, rgba(45, 111, 247, .16), transparent 30%),
+        radial-gradient(circle at 88% 12%, rgba(56, 215, 221, .20), transparent 34%),
+        linear-gradient(180deg, #f7fbff 0%, #eef7ff 46%, #f8fbff 100%);
       font-family: "Microsoft YaHei", "PingFang SC", "Noto Sans SC", sans-serif;
-      line-height: 1.66;
+      line-height: 1.68;
     }
 
     a {
@@ -52,8 +54,8 @@
     }
 
     img {
-      max-width: 100%;
       display: block;
+      max-width: 100%;
     }
 
     .site-header {
@@ -64,9 +66,9 @@
       align-items: center;
       justify-content: space-between;
       gap: 24px;
-      padding: 14px clamp(18px, 4vw, 58px);
-      border-bottom: 1px solid rgba(217, 224, 218, .88);
-      background: rgba(246, 247, 241, .94);
+      padding: 14px clamp(18px, 5vw, 72px);
+      border-bottom: 1px solid var(--line);
+      background: rgba(249, 252, 255, .86);
       backdrop-filter: blur(18px);
     }
 
@@ -75,12 +77,13 @@
       align-items: center;
       gap: 12px;
       font-weight: 900;
+      color: var(--ink);
       white-space: nowrap;
     }
 
     .brand img {
-      width: 38px;
-      height: 38px;
+      width: 40px;
+      height: 40px;
       object-fit: contain;
     }
 
@@ -99,10 +102,10 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: flex-end;
-      gap: 18px;
-      color: #3f4d55;
+      gap: 22px;
+      color: #445872;
       font-size: 14px;
-      font-weight: 700;
+      font-weight: 800;
     }
 
     .main-nav a {
@@ -111,23 +114,36 @@
     }
 
     .main-nav a:hover {
-      color: var(--green);
-      border-color: var(--green);
+      color: var(--blue);
+      border-color: var(--blue);
     }
 
     .hero {
-      min-height: 92vh;
-      display: grid;
-      align-items: end;
-      padding: clamp(92px, 12vh, 142px) clamp(20px, 5vw, 76px) 42px;
-      color: white;
-      background:
-        linear-gradient(92deg, rgba(11, 31, 35, .92) 0%, rgba(11, 31, 35, .78) 43%, rgba(11, 31, 35, .26) 100%),
-        url("https://mrtoss.maertudtech.com/pic/com-picture/img1%20(1).png") center / cover no-repeat;
+      position: relative;
+      overflow: hidden;
+      min-height: 91vh;
+      padding: clamp(92px, 12vh, 138px) clamp(20px, 6vw, 86px) 50px;
     }
 
-    .hero-content {
-      max-width: 1140px;
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background:
+        linear-gradient(120deg, rgba(45,111,247,.08), transparent 28%),
+        repeating-linear-gradient(90deg, rgba(45,111,247,.05) 0 1px, transparent 1px 90px);
+      mask-image: linear-gradient(180deg, #000 0%, transparent 78%);
+    }
+
+    .hero-wrap {
+      position: relative;
+      max-width: 1240px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.02fr .98fr;
+      gap: 48px;
+      align-items: center;
     }
 
     .eyebrow {
@@ -135,7 +151,7 @@
       align-items: center;
       gap: 10px;
       margin-bottom: 18px;
-      color: #c8eee3;
+      color: var(--blue);
       font-size: 14px;
       font-weight: 900;
     }
@@ -144,33 +160,42 @@
       content: "";
       width: 28px;
       height: 2px;
-      background: currentColor;
+      background: linear-gradient(90deg, var(--blue), var(--cyan));
     }
 
     h1,
     h2,
     h3 {
+      margin: 0;
+      color: var(--ink);
       letter-spacing: 0;
     }
 
     h1 {
-      max-width: 940px;
-      margin: 0;
-      font-size: clamp(38px, 6.4vw, 82px);
-      line-height: 1.04;
+      max-width: 720px;
+      font-size: clamp(42px, 6vw, 78px);
+      line-height: 1.03;
+    }
+
+    .gradient-text {
+      display: block;
+      color: transparent;
+      background: linear-gradient(92deg, #1859e8, #0fb7e8 52%, #1bbf91);
+      -webkit-background-clip: text;
+      background-clip: text;
     }
 
     .hero-lead {
-      max-width: 800px;
+      max-width: 700px;
       margin: 24px 0 0;
-      color: rgba(255, 255, 255, .88);
-      font-size: clamp(16px, 2vw, 22px);
+      color: #5c6f86;
+      font-size: clamp(16px, 2vw, 21px);
     }
 
     .hero-actions {
       display: flex;
       flex-wrap: wrap;
-      gap: 12px;
+      gap: 14px;
       margin-top: 34px;
     }
 
@@ -178,79 +203,188 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      min-height: 44px;
-      padding: 0 18px;
-      border: 1px solid rgba(255, 255, 255, .42);
-      border-radius: 6px;
-      color: white;
-      background: rgba(255, 255, 255, .08);
+      min-height: 46px;
+      padding: 0 20px;
+      border-radius: 999px;
+      border: 1px solid rgba(45, 111, 247, .20);
+      color: var(--blue);
+      background: rgba(255, 255, 255, .78);
+      box-shadow: 0 12px 34px rgba(45, 111, 247, .10);
       font-weight: 900;
     }
 
     .btn.primary {
-      border-color: var(--red);
-      background: var(--red);
-    }
-
-    .btn.dark {
-      border-color: var(--ink);
-      background: var(--ink);
       color: white;
+      border: 0;
+      background: linear-gradient(92deg, #3b65ff, #09a8ff);
+      box-shadow: 0 18px 36px rgba(45, 111, 247, .25);
     }
 
-    .scene-strip {
+    .hero-visual {
+      position: relative;
+      min-height: 520px;
+      perspective: 1200px;
+    }
+
+    .chip {
+      position: absolute;
+      top: 64px;
+      right: 8%;
+      width: min(390px, 78vw);
+      aspect-ratio: 1.14;
+      border: 1px solid rgba(255,255,255,.78);
+      border-radius: 42px;
+      background:
+        linear-gradient(150deg, rgba(255,255,255,.95), rgba(221,242,255,.72)),
+        radial-gradient(circle at 66% 20%, rgba(56,215,221,.45), transparent 32%);
+      box-shadow:
+        0 32px 86px rgba(45,111,247,.22),
+        inset 0 0 0 10px rgba(45,111,247,.08);
+      transform: rotateX(56deg) rotateZ(-34deg);
+    }
+
+    .chip::before {
+      content: "AI";
+      position: absolute;
+      inset: 54px;
       display: grid;
-      grid-template-columns: repeat(5, minmax(0, 1fr));
-      gap: 1px;
-      max-width: 1180px;
-      margin-top: 56px;
-      border: 1px solid rgba(255, 255, 255, .24);
-      background: rgba(255, 255, 255, .24);
+      place-items: center;
+      border-radius: 30px;
+      color: white;
+      background: linear-gradient(135deg, #326bff, #22c0ff);
+      box-shadow: inset 0 0 0 8px rgba(255,255,255,.24);
+      font-size: 78px;
+      font-weight: 900;
+      letter-spacing: 0;
     }
 
-    .scene-strip article {
-      min-height: 112px;
+    .chip::after {
+      content: "";
+      position: absolute;
+      left: 12%;
+      right: 12%;
+      bottom: -34px;
+      height: 56px;
+      border-radius: 50%;
+      background: rgba(45,111,247,.18);
+      filter: blur(10px);
+    }
+
+    .data-card {
+      position: absolute;
+      border: 1px solid rgba(255,255,255,.78);
+      border-radius: 18px;
+      background: rgba(255,255,255,.72);
+      box-shadow: 0 18px 54px rgba(45,111,247,.14);
+      backdrop-filter: blur(14px);
+    }
+
+    .data-card.one {
+      left: 2%;
+      top: 92px;
+      width: 190px;
       padding: 18px;
-      background: rgba(11, 31, 35, .58);
     }
 
-    .scene-strip strong {
-      display: block;
-      font-size: 19px;
-      line-height: 1.2;
+    .data-card.two {
+      right: 0;
+      bottom: 84px;
+      width: 220px;
+      padding: 18px;
     }
 
-    .scene-strip span {
+    .data-card.three {
+      left: 10%;
+      bottom: 50px;
+      width: 260px;
+      padding: 18px;
+    }
+
+    .data-card strong {
       display: block;
-      margin-top: 7px;
-      color: rgba(255, 255, 255, .72);
+      color: var(--ink);
+      font-size: 24px;
+      line-height: 1.1;
+    }
+
+    .data-card span {
+      display: block;
+      margin-top: 6px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .bars {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 8px;
+      align-items: end;
+      height: 78px;
+      margin-top: 14px;
+    }
+
+    .bars i {
+      border-radius: 999px 999px 6px 6px;
+      background: linear-gradient(180deg, var(--cyan), var(--blue));
+    }
+
+    .bars i:nth-child(1) { height: 32%; }
+    .bars i:nth-child(2) { height: 62%; }
+    .bars i:nth-child(3) { height: 44%; }
+    .bars i:nth-child(4) { height: 78%; }
+    .bars i:nth-child(5) { height: 55%; }
+
+    .quick-nav {
+      position: relative;
+      max-width: 1120px;
+      margin: -24px auto 0;
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 1px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: var(--line);
+      box-shadow: var(--shadow);
+    }
+
+    .quick-nav a {
+      min-height: 96px;
+      padding: 22px;
+      background: rgba(255,255,255,.86);
+    }
+
+    .quick-nav strong {
+      display: block;
+      color: var(--ink);
+      font-size: 18px;
+    }
+
+    .quick-nav span {
+      display: block;
+      margin-top: 6px;
+      color: var(--muted);
       font-size: 13px;
     }
 
     section {
-      padding: 76px clamp(20px, 5vw, 76px);
-      border-bottom: 1px solid var(--line);
+      padding: 84px clamp(20px, 6vw, 86px);
     }
 
     .section-head {
       max-width: 1180px;
-      margin: 0 auto 36px;
-      display: flex;
-      align-items: end;
-      justify-content: space-between;
-      gap: 28px;
+      margin: 0 auto 38px;
+      text-align: center;
     }
 
     h2 {
-      max-width: 680px;
-      margin: 0;
-      font-size: clamp(28px, 4vw, 48px);
+      font-size: clamp(30px, 4vw, 48px);
       line-height: 1.12;
     }
 
     .section-head p {
-      max-width: 520px;
-      margin: 0;
+      max-width: 700px;
+      margin: 14px auto 0;
       color: var(--muted);
     }
 
@@ -258,255 +392,270 @@
       max-width: 1180px;
       margin: 0 auto;
       display: grid;
-      gap: 16px;
+      gap: 18px;
     }
 
-    .solution-grid {
+    .scenario-grid {
       grid-template-columns: repeat(4, minmax(0, 1fr));
     }
 
     .card {
-      min-height: 248px;
-      padding: 24px;
+      position: relative;
+      min-height: 254px;
+      overflow: hidden;
+      padding: 26px;
       border: 1px solid var(--line);
-      border-radius: 8px;
-      background: var(--card);
-      box-shadow: 0 4px 20px rgba(22, 34, 41, .04);
+      border-radius: 18px;
+      background: var(--panel);
+      box-shadow: 0 10px 32px rgba(45, 111, 247, .08);
+      backdrop-filter: blur(16px);
     }
 
-    .tag {
-      display: inline-flex;
+    .card::after {
+      content: "";
+      position: absolute;
+      top: -36px;
+      right: -34px;
+      width: 110px;
+      height: 110px;
+      border-radius: 34px;
+      background: linear-gradient(135deg, rgba(45,111,247,.16), rgba(56,215,221,.20));
+      transform: rotate(18deg);
+    }
+
+    .icon {
+      display: grid;
+      place-items: center;
+      width: 44px;
+      height: 44px;
       margin-bottom: 18px;
-      padding: 4px 9px;
-      border-radius: 999px;
+      border-radius: 14px;
       color: white;
-      background: var(--green);
-      font-size: 12px;
+      background: linear-gradient(135deg, var(--blue), var(--sky));
       font-weight: 900;
     }
 
-    .card:nth-child(2) .tag { background: var(--blue); }
-    .card:nth-child(3) .tag { background: var(--red); }
-    .card:nth-child(4) .tag { background: var(--gold); color: #24170a; }
-
     h3 {
-      margin: 0 0 12px;
       font-size: 21px;
       line-height: 1.25;
     }
 
     .card p,
-    .product-copy p,
-    .media-card p,
-    .article-row p,
-    .site-role p {
-      margin: 0;
+    .capability p,
+    .news-card p,
+    .proof-card p {
+      margin: 12px 0 0;
       color: var(--muted);
       font-size: 14px;
     }
 
-    .card ul,
-    .product-copy ul {
-      margin: 16px 0 0;
-      padding: 0;
-      color: #3f4d55;
-      list-style: none;
-      font-size: 14px;
+    .capability-band {
+      overflow: hidden;
+      color: white;
+      background:
+        linear-gradient(115deg, rgba(24,126,255,.94), rgba(31,200,213,.76)),
+        radial-gradient(circle at 80% 35%, rgba(255,255,255,.32), transparent 34%);
     }
 
-    .card li + li,
-    .product-copy li + li {
-      margin-top: 7px;
+    .capability-band h2,
+    .capability-band h3 {
+      color: white;
     }
 
-    .card li::before,
-    .product-copy li::before {
-      content: "— ";
-      color: var(--green);
-      font-weight: 900;
+    .capability-band .section-head p,
+    .capability p {
+      color: rgba(255,255,255,.78);
     }
 
-    .product-section {
-      background: #edf2ef;
-    }
-
-    .product-layout {
+    .capability-layout {
       max-width: 1180px;
       margin: 0 auto;
       display: grid;
-      grid-template-columns: .9fr 1.1fr;
-      gap: 24px;
-      align-items: stretch;
+      grid-template-columns: .92fr 1.08fr;
+      gap: 32px;
+      align-items: center;
     }
 
-    .product-visual {
-      min-height: 520px;
-      border-radius: 8px;
-      overflow: hidden;
-      background:
-        linear-gradient(180deg, rgba(22, 34, 41, .05), rgba(22, 34, 41, .12)),
-        url("https://mrtoss.maertudtech.com/pic/com-picture/book1-1.jpg") center / cover no-repeat;
-      box-shadow: var(--shadow);
-    }
-
-    .product-copy {
+    .capability-list {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 16px;
     }
 
-    .product-copy article {
-      padding: 24px;
-      border-radius: 8px;
-      background: white;
-      border: 1px solid var(--line);
+    .capability {
+      padding: 22px;
+      border: 1px solid rgba(255,255,255,.22);
+      border-radius: 18px;
+      background: rgba(255,255,255,.12);
     }
 
-    .roles {
+    .workflow {
+      min-height: 430px;
+      padding: 34px;
+      border: 1px solid rgba(255,255,255,.32);
+      border-radius: 28px;
+      background: rgba(255,255,255,.28);
+      box-shadow: 0 30px 90px rgba(10, 75, 155, .22);
+      backdrop-filter: blur(18px);
+    }
+
+    .flow-card {
+      display: grid;
+      grid-template-columns: 44px 1fr;
+      gap: 14px;
+      align-items: center;
+      margin: 0 0 16px;
+      padding: 18px;
+      border-radius: 16px;
+      color: var(--ink);
+      background: rgba(255,255,255,.78);
+    }
+
+    .flow-card b {
+      display: grid;
+      place-items: center;
+      width: 44px;
+      height: 44px;
+      border-radius: 14px;
+      color: white;
+      background: linear-gradient(135deg, var(--blue), var(--cyan));
+    }
+
+    .flow-card strong {
+      display: block;
+      color: var(--ink);
+      line-height: 1.2;
+    }
+
+    .flow-card span {
+      display: block;
+      margin-top: 4px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .terminal-section {
+      background:
+        radial-gradient(circle at 18% 20%, rgba(45,111,247,.12), transparent 32%),
+        linear-gradient(180deg, #f8fbff, #edf7ff);
+    }
+
+    .terminal-layout {
       max-width: 1180px;
       margin: 0 auto;
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 24px;
+      align-items: stretch;
     }
 
-    .site-role {
-      min-height: 360px;
-      padding: 30px;
-      border-radius: 8px;
-      color: white;
-      background: var(--ink);
+    .terminal-visual {
+      min-height: 480px;
+      border: 1px solid rgba(255,255,255,.72);
+      border-radius: 26px;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,.42), rgba(255,255,255,.18)),
+        url("https://mrtoss.maertudtech.com/pic/com-picture/book1-1.jpg") center / cover no-repeat;
       box-shadow: var(--shadow);
     }
 
-    .site-role.alt {
-      background: #194d6f;
-    }
-
-    .site-role p {
-      color: rgba(255, 255, 255, .74);
-    }
-
-    .route {
+    .terminal-list {
       display: grid;
-      gap: 10px;
-      margin-top: 24px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
     }
 
-    .route div {
-      padding: 12px 14px;
-      border: 1px solid rgba(255, 255, 255, .18);
-      border-radius: 6px;
-      background: rgba(255, 255, 255, .07);
-      font-size: 14px;
-    }
-
-    .media-grid {
+    .proof-grid {
       grid-template-columns: 1.15fr .85fr .85fr;
     }
 
-    .media-card {
-      min-height: 250px;
-      padding: 24px;
+    .proof-card,
+    .news-card {
+      min-height: 238px;
+      padding: 26px;
       border: 1px solid var(--line);
-      border-radius: 8px;
-      background: white;
+      border-radius: 18px;
+      background: rgba(255,255,255,.82);
+      box-shadow: 0 10px 32px rgba(45, 111, 247, .08);
     }
 
-    .media-card.feature {
+    .proof-card.feature {
       color: white;
       background:
-        linear-gradient(120deg, rgba(17, 109, 90, .94), rgba(36, 94, 145, .86)),
+        linear-gradient(125deg, rgba(45,111,247,.92), rgba(34,189,206,.82)),
         url("https://mrtoss.maertudtech.com/pic/com-picture/book3-1.png") center / cover no-repeat;
     }
 
-    .media-card.feature p {
-      color: rgba(255, 255, 255, .78);
+    .proof-card.feature h3,
+    .proof-card.feature p {
+      color: white;
     }
 
-    .link-list {
-      display: grid;
-      gap: 10px;
-      margin-top: 18px;
+    .news-section {
+      background: linear-gradient(180deg, #f7fbff, #edf7ff);
     }
 
-    .link-list a {
-      padding: 10px 0;
-      border-top: 1px solid rgba(105, 122, 130, .22);
-      font-size: 14px;
+    .news-grid {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
     }
 
-    .content-hub {
-      background: var(--soft);
+    .news-card {
+      min-height: 252px;
     }
 
-    .article-list {
-      max-width: 1180px;
-      margin: 0 auto;
-      border-top: 1px solid #c9d5ce;
-    }
-
-    .article-row {
-      display: grid;
-      grid-template-columns: 150px 1fr 230px;
-      gap: 24px;
-      align-items: start;
-      padding: 22px 0;
-      border-bottom: 1px solid #c9d5ce;
-    }
-
-    .article-row .type {
-      color: var(--green);
+    .news-type {
+      display: inline-flex;
+      margin-bottom: 16px;
+      padding: 5px 10px;
+      border-radius: 999px;
+      color: var(--blue);
+      background: rgba(45,111,247,.09);
+      font-size: 12px;
       font-weight: 900;
-    }
-
-    .article-row h3 {
-      margin-bottom: 6px;
-      font-size: 18px;
-    }
-
-    .article-row .keywords {
-      color: var(--muted);
-      font-size: 13px;
     }
 
     .contact {
       color: white;
-      background: var(--deep);
+      background:
+        radial-gradient(circle at 70% 10%, rgba(34,189,206,.24), transparent 34%),
+        linear-gradient(180deg, #07182c, #020a16);
+    }
+
+    .contact h2 {
+      color: white;
     }
 
     .contact-wrap {
       max-width: 1180px;
       margin: 0 auto;
       display: grid;
-      grid-template-columns: 1.15fr .85fr;
-      gap: 32px;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 34px;
       align-items: center;
     }
 
     .contact p {
       max-width: 720px;
-      color: rgba(255, 255, 255, .72);
+      color: rgba(255,255,255,.72);
     }
 
     .contact-box {
       display: grid;
       gap: 10px;
-      padding: 22px;
-      border: 1px solid rgba(255, 255, 255, .16);
-      border-radius: 8px;
-      background: rgba(255, 255, 255, .06);
+      padding: 24px;
+      border: 1px solid rgba(255,255,255,.16);
+      border-radius: 18px;
+      background: rgba(255,255,255,.07);
     }
 
     .contact-box span {
-      color: rgba(255, 255, 255, .72);
+      color: rgba(255,255,255,.72);
       font-size: 13px;
     }
 
     footer {
-      padding: 22px clamp(20px, 5vw, 76px);
-      color: #60727a;
-      background: #eef1ec;
+      padding: 22px clamp(20px, 6vw, 86px);
+      color: rgba(255,255,255,.56);
+      background: #020a16;
       font-size: 13px;
     }
 
@@ -529,13 +678,14 @@
         justify-content: flex-start;
       }
 
-      .scene-strip,
-      .solution-grid,
-      .product-layout,
-      .product-copy,
-      .roles,
-      .media-grid,
-      .article-row,
+      .hero-wrap,
+      .quick-nav,
+      .scenario-grid,
+      .capability-layout,
+      .terminal-layout,
+      .terminal-list,
+      .proof-grid,
+      .news-grid,
       .contact-wrap {
         grid-template-columns: 1fr;
       }
@@ -544,13 +694,24 @@
         min-height: auto;
       }
 
-      .section-head {
-        align-items: flex-start;
-        flex-direction: column;
+      .hero-visual {
+        min-height: 420px;
       }
 
-      .product-visual {
-        min-height: 340px;
+      .data-card.one,
+      .data-card.two,
+      .data-card.three {
+        position: relative;
+        inset: auto;
+        width: auto;
+        margin-top: 14px;
+      }
+
+      .chip {
+        position: relative;
+        top: auto;
+        right: auto;
+        margin: 36px auto 0;
       }
     }
   </style>
@@ -577,242 +738,192 @@
   <header class="site-header">
     <a class="brand" href="#top" aria-label="美尔途 AI职途">
       <img src="https://maertu.oss-cn-hangzhou.aliyuncs.com/img/logo.png" alt="美尔途标识">
-      <span>美尔途 AI职途<small>AI 就业服务平台与智能终端</small></span>
+      <span>美尔途 AI职途<small>就业服务智能化解决方案</small></span>
     </a>
     <nav class="main-nav" aria-label="主导航">
       <a href="#solutions">解决方案</a>
-      <a href="#products">产品中心</a>
-      <a href="#cases">案例与标杆</a>
-      <a href="#media">媒体报道</a>
-      <a href="#insights">资讯中心</a>
+      <a href="#capabilities">核心能力</a>
+      <a href="#terminals">产品终端</a>
+      <a href="#proof">案例报道</a>
+      <a href="#news">资讯动态</a>
       <a href="#contact">联系我们</a>
     </nav>
   </header>
 
   <main id="top">
     <section class="hero">
-      <div class="hero-content">
-        <div class="eyebrow">服务国内高校、人社与基层公共就业场景</div>
-        <h1>AI就业服务平台与智能终端解决方案</h1>
-        <p class="hero-lead">美尔途 AI职途面向高校就业中心、人社部门、零工市场、就业驿站与街道社区，提供从简历诊断、职业测评、AI模拟面试到人岗匹配的一站式就业服务能力。</p>
-        <div class="hero-actions">
-          <a class="btn primary" href="#solutions">查看场景方案</a>
-          <a class="btn" href="#media">查看媒体报道</a>
-          <a class="btn" href="#insights">查看资讯内容池</a>
+      <div class="hero-wrap">
+        <div>
+          <div class="eyebrow">高校 · 人社 · 零工市场 · 就业驿站</div>
+          <h1>AI职途<br><span class="gradient-text">就业服务智能化解决方案</span></h1>
+          <p class="hero-lead">以AI简历诊断、职业测评、AI模拟面试、人岗匹配和智能终端为核心，帮助公共就业服务与高校就业指导实现更高效的服务触达。</p>
+          <div class="hero-actions">
+            <a class="btn primary" href="#solutions">查看解决方案</a>
+            <a class="btn" href="#terminals">了解产品终端</a>
+          </div>
         </div>
-        <div class="scene-strip" aria-label="重点应用场景">
-          <article><strong>高校就业</strong><span>就业指导中心、二级学院、招聘会专区</span></article>
-          <article><strong>人社服务</strong><span>公共就业服务大厅、人才中心、基层服务站</span></article>
-          <article><strong>零工市场</strong><span>灵活就业、技能培训、岗位匹配</span></article>
-          <article><strong>就业驿站</strong><span>街道社区、15分钟就业服务圈</span></article>
-          <article><strong>招聘活动</strong><span>双选会、夜市招聘、进校园服务</span></article>
+        <div class="hero-visual" aria-label="AI就业服务数据可视化">
+          <div class="chip"></div>
+          <div class="data-card one">
+            <strong>50+</strong>
+            <span>合作院校与服务场景</span>
+            <div class="bars"><i></i><i></i><i></i><i></i><i></i></div>
+          </div>
+          <div class="data-card two">
+            <strong>30+</strong>
+            <span>政府与机构合作基础</span>
+          </div>
+          <div class="data-card three">
+            <strong>15分钟</strong>
+            <span>就业服务圈智能化触点</span>
+          </div>
         </div>
       </div>
     </section>
+
+    <nav class="quick-nav" aria-label="快速入口">
+      <a href="#solutions"><strong>场景方案</strong><span>匹配不同服务对象和建设需求</span></a>
+      <a href="#capabilities"><strong>核心能力</strong><span>简历、测评、面试、岗位匹配</span></a>
+      <a href="#terminals"><strong>产品终端</strong><span>一体机、面试舱、移动终端</span></a>
+      <a href="#proof"><strong>案例报道</strong><span>媒体报道、项目案例、资质荣誉</span></a>
+    </nav>
 
     <section id="solutions">
       <div class="section-head">
-        <h2>围绕真实采购场景设计栏目</h2>
-        <p>官网不是只展示公司，而是承接搜索需求、采购调研和媒体背书。每个场景都对应可持续更新的专题页与文章页。</p>
+        <h2>服务多类就业服务场景</h2>
+        <p>从高校就业中心到人社服务大厅，从零工市场到街道社区，美尔途提供可落地、可运营、可沉淀数据的智能化服务方案。</p>
       </div>
-      <div class="grid solution-grid">
+      <div class="grid scenario-grid">
         <article class="card">
-          <span class="tag">高校</span>
-          <h3>高校就业服务解决方案</h3>
-          <p>面向就业指导中心、招生就业处、二级学院和校园招聘活动，建设可体验、可评估、可留痕的AI就业服务专区。</p>
-          <ul>
-            <li>AI简历诊断与优化</li>
-            <li>职业测评与生涯规划</li>
-            <li>AI模拟面试与复盘报告</li>
-            <li>招聘会岗位智能匹配</li>
-          </ul>
+          <div class="icon">校</div>
+          <h3>高校就业服务</h3>
+          <p>适用于就业指导中心、二级学院、校园招聘会和生涯教育空间，提升学生求职准备与就业指导效率。</p>
         </article>
         <article class="card">
-          <span class="tag">人社</span>
-          <h3>公共就业服务解决方案</h3>
-          <p>服务人社局、人才中心、公共就业服务大厅和基层服务站，提升求职登记、就业指导和岗位推荐效率。</p>
-          <ul>
-            <li>政策咨询与就业指导</li>
-            <li>求职者画像与岗位推荐</li>
-            <li>就业服务数据沉淀</li>
-            <li>大厅智能终端部署</li>
-          </ul>
+          <div class="icon">政</div>
+          <h3>人社公共就业</h3>
+          <p>适用于公共就业服务大厅、人才中心和基层服务站，支持求职登记、岗位推荐与就业指导。</p>
         </article>
         <article class="card">
-          <span class="tag">零工市场</span>
-          <h3>零工市场数智化方案</h3>
-          <p>围绕灵活就业、临时用工和技能培训，帮助零工市场从信息撮合升级到智能匹配与服务闭环。</p>
-          <ul>
-            <li>零工岗位智能匹配</li>
-            <li>简历建档与能力标签</li>
-            <li>技能培训与就业跟踪</li>
-            <li>服务成效数据看板</li>
-          </ul>
+          <div class="icon">工</div>
+          <h3>零工市场服务</h3>
+          <p>适用于灵活就业服务、技能培训和临时用工撮合，帮助求职者快速建立能力标签并匹配岗位。</p>
         </article>
         <article class="card">
-          <span class="tag">基层</span>
-          <h3>就业驿站与街道社区方案</h3>
-          <p>面向15分钟就业服务圈、街道社区和基层服务窗口，用轻量终端把就业服务送到居民身边。</p>
-          <ul>
-            <li>社区求职咨询</li>
-            <li>职业测评与简历优化</li>
-            <li>本地岗位推荐</li>
-            <li>就业活动预约与导流</li>
-          </ul>
+          <div class="icon">站</div>
+          <h3>就业驿站社区</h3>
+          <p>适用于街道社区、就业驿站和15分钟就业服务圈，让居民就近获得简历、面试和岗位服务。</p>
         </article>
       </div>
     </section>
 
-    <section id="products" class="product-section">
+    <section id="capabilities" class="capability-band">
       <div class="section-head">
-        <h2>软件平台 + 硬件终端，形成15分钟就业服务场景</h2>
-        <p>以 AI职途平台为核心，按场地面积、服务对象和预算配置不同形态的智能终端。</p>
+        <h2>完整的AI就业服务闭环</h2>
+        <p>从求职准备到岗位匹配，形成一套面向公共服务和高校就业指导的数字化能力组合。</p>
       </div>
-      <div class="product-layout">
-        <div class="product-visual" aria-label="AI职途终端展示图"></div>
-        <div class="product-copy">
-          <article>
-            <h3>AI职途平台</h3>
-            <p>覆盖简历、测评、规划、面试、匹配和招聘会数据沉淀。</p>
-            <ul>
-              <li>AI简历诊断</li>
-              <li>AI职业测评</li>
-              <li>AI生涯规划师</li>
-            </ul>
+      <div class="capability-layout">
+        <div class="capability-list">
+          <article class="capability">
+            <h3>AI简历诊断与优化</h3>
+            <p>对简历结构、岗位匹配度、表达清晰度进行分析，生成可视化诊断与优化建议。</p>
           </article>
-          <article>
+          <article class="capability">
+            <h3>职业测评与生涯规划</h3>
+            <p>结合职业兴趣、能力评估和发展目标，辅助学生与求职者建立职业方向。</p>
+          </article>
+          <article class="capability">
+            <h3>AI模拟面试</h3>
+            <p>通过数字人交互、语音分析和面试复盘，帮助求职者完成针对性训练。</p>
+          </article>
+        </div>
+        <div class="workflow">
+          <div class="flow-card"><b>1</b><div><strong>建立求职画像</strong><span>简历、测评、意向、能力标签统一沉淀</span></div></div>
+          <div class="flow-card"><b>2</b><div><strong>生成提升建议</strong><span>输出简历优化、面试训练和职业路径建议</span></div></div>
+          <div class="flow-card"><b>3</b><div><strong>匹配岗位资源</strong><span>依据地区、行业、薪资和能力条件推荐岗位</span></div></div>
+          <div class="flow-card"><b>4</b><div><strong>服务数据留痕</strong><span>支持服务次数、活动效果和求职过程回溯</span></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="terminals" class="terminal-section">
+      <div class="section-head">
+        <h2>多形态智能终端适配不同场地</h2>
+        <p>根据场地面积、服务强度和预算条件，选择一体机、面试舱、桌面终端或移动终端组合部署。</p>
+      </div>
+      <div class="terminal-layout">
+        <div class="terminal-visual" aria-label="AI职途产品终端"></div>
+        <div class="terminal-list">
+          <article class="card">
+            <div class="icon">屏</div>
             <h3>AI就业服务一体机</h3>
-            <p>适合政务大厅、人社中心、招聘活动和就业服务专区。</p>
-            <ul>
-              <li>大屏交互</li>
-              <li>打印与报告输出</li>
-              <li>可对接服务流程</li>
-            </ul>
+            <p>适合服务大厅、招聘会现场和就业服务专区，支持大屏交互与报告输出。</p>
           </article>
-          <article>
+          <article class="card">
+            <div class="icon">舱</div>
             <h3>AI面试舱/求职舱</h3>
-            <p>适合高校走廊、图书馆、就业中心和示范区。</p>
-            <ul>
-              <li>独立私密空间</li>
-              <li>数字人模拟面试</li>
-              <li>面试复盘建议</li>
-            </ul>
+            <p>提供相对私密的模拟面试空间，适合高校走廊、图书馆和就业中心。</p>
           </article>
-          <article>
-            <h3>招聘会智能专区</h3>
-            <p>服务双选会、校园招聘会、夜市招聘和百日行动活动。</p>
-            <ul>
-              <li>岗位智能匹配</li>
-              <li>企业简历接收</li>
-              <li>活动数据回溯</li>
-            </ul>
+          <article class="card">
+            <div class="icon">台</div>
+            <h3>桌面服务终端</h3>
+            <p>适合咨询台、办事窗口和临时活动场景，轻量部署完整服务能力。</p>
+          </article>
+          <article class="card">
+            <div class="icon">板</div>
+            <h3>移动求职终端</h3>
+            <p>适合流动服务、进校园活动和临时布点，方便快速开展现场服务。</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="cases">
+    <section id="proof">
       <div class="section-head">
-        <h2>两个官网建议分工：主品牌权威站 + 区域案例站</h2>
-        <p>美尔途官网负责产品、资质、权威背书；壹想官网负责区域落地、活动报道和本地案例。互相导流，但不复制同一套页面。</p>
+        <h2>项目案例与权威报道</h2>
+        <p>通过媒体报道、项目活动、合作生态和资质荣誉，展示AI职途在就业服务场景中的实践基础。</p>
       </div>
-      <div class="roles">
-        <article class="site-role">
-          <h3>美尔途官网</h3>
-          <p>主品牌、全国方案、产品中心、媒体报道、资质荣誉、合作生态。适合承接“AI就业服务一体机、AI面试舱、高校就业服务平台、人社就业服务数字化”等核心词。</p>
-          <div class="route">
-            <div>首页：AI就业服务平台与智能终端</div>
-            <div>产品：AI职途平台、就业服务一体机、AI面试舱</div>
-            <div>媒体：CCTV、新华社、地方媒体报道链接库</div>
-            <div>底部：链接壹想科技区域落地案例</div>
-          </div>
+      <div class="grid proof-grid">
+        <article class="proof-card feature">
+          <h3>媒体报道</h3>
+          <p>CCTV-13、新华社、地方电视台、日报媒体等报道可集中展示，增强客户对品牌和项目实践的信任。</p>
         </article>
-        <article class="site-role alt">
-          <h3>壹想官网</h3>
-          <p>区域运营、福建及多地项目落地、活动报道、地方人社与高校服务案例。适合承接“福建高校就业服务、福州人社就业服务、就业驿站建设、零工市场数字化”等区域与场景词。</p>
-          <div class="route">
-            <div>首页：区域就业服务落地伙伴</div>
-            <div>案例：高校/人社/基层就业服务实录</div>
-            <div>资讯：本地政策、招聘活动、媒体报道转写</div>
-            <div>底部：链接美尔途 AI职途产品体系</div>
-          </div>
+        <article class="proof-card">
+          <h3>高校合作</h3>
+          <p>服务高校招聘会、就业指导中心、生涯教育空间和学生求职训练等应用场景。</p>
+        </article>
+        <article class="proof-card">
+          <h3>人社与机构</h3>
+          <p>服务公共就业、人才服务、基层驿站、零工市场和大型招聘活动。</p>
         </article>
       </div>
     </section>
 
-    <section id="media">
+    <section id="news" class="news-section">
       <div class="section-head">
-        <h2>媒体报道做成独立信任栏目</h2>
-        <p>你们已有很多媒体报道链接，建议集中建立“报道摘要页 + 原文链接 + 地区标签 + 场景标签”，让搜索引擎和AI模型更容易识别权威来源。</p>
+        <h2>资讯动态</h2>
+        <p>持续发布政策解读、活动报道、项目动态和产品更新，让客户看到真实服务进展。</p>
       </div>
-      <div class="grid media-grid">
-        <article class="media-card feature">
-          <h3>权威媒体报道</h3>
-          <p>集中展示 CCTV-13、新华社、地方电视台、日报等报道链接，形成品牌可信度入口。</p>
-          <div class="link-list">
-            <a href="#contact">CCTV-13 新闻频道报道链接位</a>
-            <a href="#contact">新华社报道链接位</a>
-            <a href="#contact">福建电视台报道链接位</a>
-          </div>
+      <div class="grid news-grid">
+        <article class="news-card">
+          <span class="news-type">政策解读</span>
+          <h3>高校毕业生就业服务数字化建设</h3>
+          <p>解读高校就业中心如何通过智能工具提升就业指导和招聘服务效率。</p>
         </article>
-        <article class="media-card">
-          <h3>地方实践报道</h3>
-          <p>按城市和服务类型聚合报道，适合做“城市 + AI就业服务”的长尾关键词。</p>
-          <div class="link-list">
-            <a href="#contact">高校招聘会 AI就业服务报道</a>
-            <a href="#contact">人社公共就业服务报道</a>
-            <a href="#contact">零工市场升级报道</a>
-          </div>
+        <article class="news-card">
+          <span class="news-type">人社服务</span>
+          <h3>15分钟就业服务圈建设实践</h3>
+          <p>展示就业驿站、街道社区和基层服务站的数字化服务触点。</p>
         </article>
-        <article class="media-card">
-          <h3>荣誉资质</h3>
-          <p>把服务商身份、实践基地、专利软著和赛事奖项放在同一个栏目中。</p>
-          <div class="link-list">
-            <a href="#contact">人工智能训练师实践基地</a>
-            <a href="#contact">人力资源服务创新创业奖项</a>
-            <a href="#contact">发明专利与软件著作权</a>
-          </div>
+        <article class="news-card">
+          <span class="news-type">零工市场</span>
+          <h3>灵活就业服务与岗位匹配</h3>
+          <p>关注零工市场、技能培训和本地岗位推荐的服务升级路径。</p>
         </article>
-      </div>
-    </section>
-
-    <section id="insights" class="content-hub">
-      <div class="section-head">
-        <h2>资讯中心是 SEO/GEO 的长期内容池</h2>
-        <p>平时发布最新资讯时，同步沉淀到官网文章页并进入 sitemap。每篇文章建议包含摘要、FAQ、内链、媒体/政策引用和清晰的地区标签。</p>
-      </div>
-      <div class="article-list">
-        <article class="article-row">
-          <div class="type">政策解读</div>
-          <div>
-            <h3>高校毕业生就业服务数字化建设怎么做？</h3>
-            <p>围绕就业指导中心、招聘会、简历诊断、AI模拟面试、岗位匹配展开。</p>
-          </div>
-          <div class="keywords">关键词：高校就业服务、AI就业指导、就业服务平台</div>
-        </article>
-        <article class="article-row">
-          <div class="type">人社场景</div>
-          <div>
-            <h3>人社公共就业服务如何建设15分钟就业服务圈？</h3>
-            <p>适合承接人社大厅、街道社区、就业驿站、基层服务站相关搜索。</p>
-          </div>
-          <div class="keywords">关键词：就业驿站、街道社区就业、人社就业服务</div>
-        </article>
-        <article class="article-row">
-          <div class="type">零工市场</div>
-          <div>
-            <h3>零工市场数智化升级：从岗位发布到人岗匹配</h3>
-            <p>突出灵活就业、技能培训、求职登记、AI匹配和数据看板。</p>
-          </div>
-          <div class="keywords">关键词：零工市场、灵活就业、AI人岗匹配</div>
-        </article>
-        <article class="article-row">
-          <div class="type">活动报道</div>
-          <div>
-            <h3>AI职途进校园：招聘会现场如何提升求职服务效率？</h3>
-            <p>把每次活动变成可收录案例，绑定城市、学校、活动类型和产品能力。</p>
-          </div>
-          <div class="keywords">关键词：校园招聘会、AI求职一体机、模拟面试</div>
+        <article class="news-card">
+          <span class="news-type">活动报道</span>
+          <h3>AI职途进校园招聘活动</h3>
+          <p>记录双选会、校园招聘会和专项就业活动中的AI服务应用。</p>
         </article>
       </div>
     </section>
@@ -820,12 +931,12 @@
     <section id="contact" class="contact">
       <div class="contact-wrap">
         <div>
-          <div class="eyebrow">方案咨询与媒体链接补充</div>
-          <h2>把官网变成线索入口和内容沉淀入口</h2>
-          <p>底部建议固定放客户专线、微信、公众号、视频号、抖音号、邮箱与二维码。媒体报道链接可以持续补充到“媒体报道”栏目，用于提升搜索与生成式AI引用概率。</p>
+          <div class="eyebrow">方案咨询</div>
+          <h2>让就业服务更智能、更高效、更可触达</h2>
+          <p>欢迎高校就业中心、人社部门、零工市场、就业驿站与街道社区咨询AI职途平台与智能终端部署方案。</p>
           <div class="hero-actions">
             <a class="btn primary" href="tel:15802723777">拨打客户专线</a>
-            <a class="btn" href="https://www.maertudtech.com/pages/index.html">访问美尔途官网</a>
+            <a class="btn" href="https://www.maertudtech.com/pages/index.html">访问现有官网</a>
           </div>
         </div>
         <div class="contact-box">
@@ -842,8 +953,8 @@
 
   <footer>
     <div>
-      <span>© 2026 深圳市美尔途数字科技有限公司 · AI职途官网栏目预览</span>
-      <span>面向高校、人社、零工市场、就业驿站、街道社区</span>
+      <span>© 2026 深圳市美尔途数字科技有限公司 · AI职途</span>
+      <span>服务高校、人社、零工市场、就业驿站、街道社区</span>
     </div>
   </footer>
 </body>
